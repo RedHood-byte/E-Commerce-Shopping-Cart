@@ -1,0 +1,86 @@
+﻿@model Cart
+@{
+    Layout = "_CartLayout";
+    ViewData["Title"] = "ViewCart";
+}
+<div class="container">
+    <div class="row col-md-10 col-md-offset-1 custyle">
+        <table class="table table-striped custab">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Stock</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            @{
+                double cost = 0;
+                foreach (CartItem cartItem in Model.CartItems)
+                {
+                        <tr>
+                            <td><img src="~/images/@cartItem.Product.Image" class="img-responsive"></td>
+                            <td>@cartItem.Product.Name</td>
+                            <td>@cartItem.Product.Desc</td>
+                            <td>@cartItem.Product.Stock</td>
+                            <td>@cartItem.Quantity</td>
+                            <td>@cartItem.Product.UnitPrice</td>
+                            @if (@cartItem.Quantity < @cartItem.Product.Stock)
+                            {
+                                <td>
+                                    <a href="@Url.Action("AddToCartFromDetail", "Home",  new { prdId = cartItem.Product.Id, quantity = 1 })">
+                                        <span class="glyphicon glyphicon-plus"></span>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="@Url.Action("AddToCartFromDetail", "Home",  new { prdId = cartItem.Product.Id, quantity = -1 })">
+                                        <span class="glyphicon glyphicon-minus"></span>
+                                    </a>
+                                </td>
+                            }
+                            else
+                            {
+                                <td>
+                                    <a href="@Url.Action("AddToCartFromDetail", "Home",  new { prdId = cartItem.Product.Id, quantity = -1 })">
+                                        <span class="glyphicon glyphicon-minus"></span>
+                                    </a>
+                                </td>
+                            }
+                        </tr>
+                    cost += @cartItem.Quantity * @cartItem.Product.UnitPrice;
+                }
+        <tr>
+            <td>
+                <a href="@Url.Action("Index", "Home")" class="btn btn-primary">
+                    Continue Shopping
+                </a>
+            </td>
+            <td>
+                @if (cost != 0)
+                {
+                    <form action="/Home/Payment">
+                        <button class="btn btn-primary" type="submit">Payment</button>
+                    </form>
+                }
+                else
+                {
+                    <strong>No product present in shopping cart !</strong>
+                }
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><strong>@("Total $" + @cost)</strong></td>
+            <td>
+               
+            </td>
+        </tr>   
+            }
+        </table>
+    </div>
+</div>

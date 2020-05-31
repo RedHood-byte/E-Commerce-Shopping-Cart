@@ -1,0 +1,154 @@
+﻿@{ 
+    Layout = "_CartLayout";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        body {
+            font-family: "Helvetica Neue", Helvetica,serif;
+            font-size: 20px;
+            padding: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: -ms-flexbox; /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap; /* IE10 */
+            flex-wrap: wrap;
+            margin: 0 -16px;
+        }
+
+        .coll-25 {
+            -ms-flex: 25%; /* IE10 */
+            flex: 25%;
+        }
+
+        .coll-50 {
+            -ms-flex: 50%; /* IE10 */
+            flex: 50%;
+        }
+
+        .coll-75 {
+            -ms-flex: 75%; /* IE10 */
+            flex: 75%;
+        }
+
+        .coll-25,
+        .coll-50,
+        .coll-75 {
+            padding: 0 16px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 15px 30px 15px 15px;
+            border: 2px solid #99ebff;
+            border-radius: 24px;
+        }
+
+        input[type=text] {
+            width: 40%;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 2px solid #99ebff;
+            border-radius: 24px;
+        }
+
+        label {
+            position: relative;
+            color: #6A7C94;
+            font-weight: 300;
+            height: 40px;
+            line-height: 40px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+
+
+        .bttn {
+            background-color: #00ccff;
+            color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border: none;
+            width: 40%;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 20px;
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,0.10), inset 0 -1px 0 0 #E57C45 font-weight: 500
+        }
+
+            .bttn:hover {
+                background-color: #00ff00;
+            }
+
+        a {
+            color: #2196F3;
+        }
+
+        hr {
+            border: 2px solid lightgrey;
+        }
+
+        span.price {
+            float: right;
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Credit Card Payment Page</h2>
+
+    <div class="row">
+        <div class="coll-75">
+            <div class="container">
+                <form action="checkoutDone.html">
+
+
+
+
+                    <div class="coll-50">
+                        <h3>Here you can make your Credit Card Payment</h3>
+                        <label for="name">Accepted Credit Cards</label>
+                        <div class="creditcardlogo">
+                            <input disabled="disabled" type="radio" name="PaymentMethod" value="CREDITCARD" checked="checked" id="creditcard">
+                            <img alt="Credit Card" height="35" width="300" src="https://www.adidas.com.sg/on/demandware.static/-/Sites-adidas-SG-Library/default/dwe6138895/paymentmethodsvmpp_SG.png" title="" />
+                        </div>
+                        <label for="user">Name</label>
+                        <input type="text" id="user" name="cardname" placeholder="Isaac Newton">
+                        <label for="number">Card Number</label>
+                        <input type="text" id="number" name="cardnumber" placeholder="1111-2222-3333-4444">
+                        <label for="month">Expiry Month</label>
+                        <input type="text" id="month" name="month" placeholder="March">
+                        <div class="row">
+                            <div class="coll-50">
+                                <label for="year">Expiry Year</label>
+                                <input type="text" id="year" name="year" placeholder="2020">
+                            </div>
+                            <div class="coll-50">
+                                <label for="cvv">CVV/CVC</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="666">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form action ="/Home/PaymentResult">
+                    <button class="btn-primary" type ="submit">Payment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

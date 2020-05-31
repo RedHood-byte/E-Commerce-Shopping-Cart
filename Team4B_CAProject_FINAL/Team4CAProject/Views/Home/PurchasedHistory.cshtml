@@ -1,0 +1,33 @@
+﻿@model List<Cart>
+@{ 
+    Layout = "_IndexLayout";
+}
+
+<div id="purchased" class="container">
+    <div class="row col-md-10 col-md-offset-1 custyle">
+        <table class="table table-striped custab">
+            <thead>
+                <tr>
+                    <th>CartId</th>
+                    <th>Quantity</th>
+                    <th>Cost</th>
+                    <th>Time</th>
+                    <th></th>
+                </tr>
+            </thead>
+            @{
+                foreach (Cart cart in Model)
+                {
+
+                    <tr>
+                        <td>@cart.Id</td>
+                        <td>@cart.Quantity</td>
+                        <td>@cart.Value</td>
+                        <td>@cart.CheckoutTime</td>
+                        <td><a href=@("/Home/MyPurchase?cartId=" + @cart.Id)><span class="glyphicon glyphicon-list-alt"></span></a></td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>

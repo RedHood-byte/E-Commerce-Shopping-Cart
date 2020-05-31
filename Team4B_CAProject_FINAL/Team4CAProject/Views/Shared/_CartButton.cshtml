@@ -1,0 +1,12 @@
+﻿<a id="cartButton" class="nav-link" href="/Home/ViewCart">
+    <i class="fa fa-globe">
+        @if ((int)ViewData["ItemCount"] == 0)
+        {
+            <span class="glyphicon glyphicon-shopping-cart"></span>
+        }
+        else
+        {
+            <span class="glyphicon glyphicon-shopping-cart">@ViewData["ItemCount"]</span>
+        }
+    </i>
+</a>

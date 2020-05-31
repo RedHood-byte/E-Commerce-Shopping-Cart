@@ -1,0 +1,50 @@
+﻿@{
+    Layout = "_IndexLayout";
+    ViewData["Title"] = "Home Page";
+    var products = (List<Product>)ViewData["products"];
+}
+<!-- Search form -->
+<form id="search" action="/Home/BrowseNoLogin" method="post">
+    <table align="center">
+        <tr>
+            <td>
+                <input type="search" name="query" id="query" class="form-control" width="30%" placeholder="Search" value=@(ViewBag.keyword)>
+            </td>
+            <td>
+                <button type="submit" class="btn btn-primary" value="Submit">Search</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+
+<style type="text/css">
+    #show {
+        width ="50px";
+        height ="50px"
+    }
+</style>
+
+
+@section Scripts
+{
+    <script>
+        var updateCart = function (url) {
+            $("#cartButton").load(url);
+        };
+    </script>
+}
+
+@foreach (var product in products)
+{
+    <div class="col-sm-4" id="show">
+        <div class="thumbnail">
+            <img src="~/images/@product.Image" id="img" width="200" height="200">
+            <p><strong>@product.Name</strong></p>
+            <p>@product.Desc</p>
+            <p>Price : $@product.UnitPrice</p>
+            <div><button class="btn-primary" onclick="updateCart(@Html.Raw("'" + "/Home/AddToCart?prdId=" + @product.Id + "'"))">Add to Cart</button></div>
+        </div>
+    </div>
+}
+

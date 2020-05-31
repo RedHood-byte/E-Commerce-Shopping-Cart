@@ -1,0 +1,64 @@
+﻿<style type="text/css">
+    table{
+        width:500px;
+        height:auto;
+    }
+    #login{
+        margin-left:90%;
+        margin-top:10px;
+    }
+    #err{
+        text-decoration-color:red;
+    }
+
+</style>
+
+@{
+    Layout = "_NoLogin";
+    ViewData["Title"] = "Login";
+}
+<form action="/Home/AfterLogin" method="post">
+    <table align="center">
+        <tr>
+            <td>
+                <div class="col-sm-2">
+                    <label for="username">Username</label>
+                </div>
+            </td>
+            <td>
+                <div class="col-sm-6">
+                    <input name="username" class="form-control" id="username" placeholder="Username" required />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="col-sm-2">
+                    <label for="password">Password</label>
+                </div>
+            </td>
+            <td>
+                <div class="col-sm-6">
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Password" required />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="login">
+                    <button type="submit" class="btn btn-primary" value="Submit">Login</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan ="2" align="center">
+                <font color="red">@TempData["err"]</font>
+            </td>
+        </tr>
+    </table>
+</form>
+
+
+
+
+
