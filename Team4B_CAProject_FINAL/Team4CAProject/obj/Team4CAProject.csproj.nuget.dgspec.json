@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ISS_NUS\\NETCORE\\CA\\Team4B_CAProject_Final\\Team4B_CAProject_Final\\Team4B_CAProject_FINAL\\Team4CAProject\\Team4CAProject.csproj": {}
+    "C:\\Users\\Saw Htet Kyaw\\Source\\Repos\\E-Commerce-Shopping-Cart_Testing\\Team4B_CAProject_FINAL\\Team4CAProject\\Team4CAProject.csproj": {}
   },
   "projects": {
-    "D:\\ISS_NUS\\NETCORE\\CA\\Team4B_CAProject_Final\\Team4B_CAProject_Final\\Team4B_CAProject_FINAL\\Team4CAProject\\Team4CAProject.csproj": {
+    "C:\\Users\\Saw Htet Kyaw\\Source\\Repos\\E-Commerce-Shopping-Cart_Testing\\Team4B_CAProject_FINAL\\Team4CAProject\\Team4CAProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ISS_NUS\\NETCORE\\CA\\Team4B_CAProject_Final\\Team4B_CAProject_Final\\Team4B_CAProject_FINAL\\Team4CAProject\\Team4CAProject.csproj",
+        "projectUniqueName": "C:\\Users\\Saw Htet Kyaw\\Source\\Repos\\E-Commerce-Shopping-Cart_Testing\\Team4B_CAProject_FINAL\\Team4CAProject\\Team4CAProject.csproj",
         "projectName": "Team4CAProject",
-        "projectPath": "D:\\ISS_NUS\\NETCORE\\CA\\Team4B_CAProject_Final\\Team4B_CAProject_Final\\Team4B_CAProject_FINAL\\Team4CAProject\\Team4CAProject.csproj",
-        "packagesPath": "C:\\Users\\hanhn\\.nuget\\packages\\",
-        "outputPath": "D:\\ISS_NUS\\NETCORE\\CA\\Team4B_CAProject_Final\\Team4B_CAProject_Final\\Team4B_CAProject_FINAL\\Team4CAProject\\obj\\",
+        "projectPath": "C:\\Users\\Saw Htet Kyaw\\Source\\Repos\\E-Commerce-Shopping-Cart_Testing\\Team4B_CAProject_FINAL\\Team4CAProject\\Team4CAProject.csproj",
+        "packagesPath": "C:\\Users\\Saw Htet Kyaw\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Saw Htet Kyaw\\Source\\Repos\\E-Commerce-Shopping-Cart_Testing\\Team4B_CAProject_FINAL\\Team4CAProject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\hanhn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Saw Htet Kyaw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
